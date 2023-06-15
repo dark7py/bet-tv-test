@@ -69,62 +69,6 @@ const App: React.FC = () => {
     }
   }, [recordedChunks]);
 
-  // const handleRecord = () => {
-  //   if (recording) {
-  //     mediaRecorderRef.current?.stop();
-  //   } else {
-  //     setRecordedChunks([]);
-  //     startRecording();
-  //   }
-  //   setRecording(prevRecording => !prevRecording);
-  // };
-
-  // const startRecording = () => {
-  //   const videoElement = videoRef.current;
-  //   // const webcamElement = webcamRef.current;
-
-  //   if (videoElement) {
-  //     navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
-  //       videoElement.srcObject = stream;
-  //       videoElement.play();
-
-  //       // const webcamStream = webcamElement.captureStream();
-  //       const fullStream = new MediaStream([
-  //         ...stream.getVideoTracks(),
-  //         // ...webcamStream.getVideoTracks(),
-  //       ]);
-  //       mediaRecorderRef.current = new MediaRecorder(fullStream);
-  //       mediaRecorderRef.current.addEventListener(
-  //         'dataavailable',
-  //         handleDataAvailable
-  //       );
-  //       mediaRecorderRef.current.start();
-  //     });
-  //   }
-  // };
-
-  // const handleDataAvailable = (event: BlobEvent) => {
-  //   if (event.data.size > 0) {
-  //     setRecordedChunks(prevChunks => [...prevChunks, event.data]);
-  //   }
-  // };
-
-  // const saveRecording = () => {
-  //   const fullRecording = new Blob(recordedChunks, {
-  //     type: recordedChunks[0].type,
-  //   });
-  //   console.log(fullRecording);
-  //   const url = URL.createObjectURL(fullRecording);
-  //   const a = document.createElement('a');
-  //   document.body.appendChild(a);
-  //   a.style.display = 'none';
-  //   a.href = url;
-  //   a.download = 'recording.webm';
-  //   a.click();
-  //   window.URL.revokeObjectURL(url);
-  //   setRecordedChunks([]);
-  // };
-
   return (
     <>
       <div className='container'>
