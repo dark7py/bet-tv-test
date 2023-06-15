@@ -1,0 +1,5 @@
+.webcam {
+  transform: scaleX(-1);
+  position: absolute;
+  width: 300px;
+}
